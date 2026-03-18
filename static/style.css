@@ -1,7 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    font-family: sans-serif;
+    background-color: #090909;
+    font-family: 'Libre Baskerville', serif;
+    color: #e8e8e0;
     margin: 0;
     padding: 20px;
+    min-height: 100vh;    /* mindestens volle Höhe, wächst wenn Inhalt mehr braucht */
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.dashboard {
+    background-color: #1a1a1a;  /* Etwas heller als der Hintergrund */
+    border: 1px solid #333;     /* Rahmen */
+    border-radius: 32px;        /* Abgerundete Ecken */
+    padding: 40px;
+    margin: auto;
+    width: 90vw;                /* 90% der Bildschirmbreite */
+    min-height: 90vh;           /* 90% der Bildschirmhöhe */
+}
+
+
+.top {
+    text-align: center;
+    font-size: 70px;
+    margin: 100px
+    font-weight: 400;
+    padding-top: 60px;
+}
+
+
+.highlight {
+  color: #e6a25e;
+  font-style: italic
 }
