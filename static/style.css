@@ -30,7 +30,7 @@ body {
 .top {
     text-align: center;
     font-size: 70px;
-    margin: 100px
+    margin: 100px;
     font-weight: 400;
     padding-top: 60px;
 }
@@ -38,5 +38,27 @@ body {
 
 .highlight {
   color: #e6a25e;
-  font-style: italic
+  font-style: italic;
+}
+
+.widget {
+    background-color: #22222;
+    border: 1px solid #e6a25e;
+    border-radius: 8px;
+    padding: 20px;
+    display: inline-block;
+    font-size: 23px;
+}
+
+.widgettitle {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.widgetinfo {
+    margin-bottom: 10px;
+}
+
+.widgettext {
+    margin-bottom: 10px
 }

@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from widgets.weather import get_weather
 
 # Creates App with FastAPI
 app = FastAPI()
@@ -13,7 +14,14 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/") # Homepage
 def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+
+    # Getting info from APIs
+    weather = get_weather()
+
+    return templates.TemplateResponse("home.html", {
+        "request": request,
+        "weather": weather
+    })
 
 
 @app.get("/configure/") # Configurepage

@@ -9,7 +9,23 @@
 <body>
     <div class="dashboard">
         <div class="top">
-        Your <span class="highlight">personal</span> Dashboard
+            Your <span class="highlight">personal</span> Dashboard
+        </div>
+        <div class="widget">
+            <div class="widgettitle">
+                Weather
+            </div>
+            <div class="widgetinfo">
+                <div class="widgettext">
+                <span class="highlight">Temperature:</span>   {{ weather.temperature_2m }}°C <br>
+                </div>
+                <div class="widgettext">
+                    <span class="highlight"> Clouds:</span>   {{ weather.description }}<br>
+                </div>
+                <div class="widgettext">
+                    <span class="highlight"> Windspeed:</span>   {{ weather.windspeed_10m }} km/h<br>
+                </div>
+            </div>
         </div>
     </div>
 </body>
