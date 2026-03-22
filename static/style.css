@@ -16,6 +16,40 @@ body {
     box-sizing: border-box;
 }
 
+input {
+    background-color: #2a2a2a;
+    height: 28px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #e8e8e0;
+    padding: 1px 5px;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 23px;
+    outline: none;
+    width: 100%;
+    align-items: center;
+}
+
+button {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #e6a25e;
+    padding: 0 10px;
+    font-size: 25px;
+    cursor: pointer;
+    height: 28px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .dashboard {
     background-color: #1a1a1a;  /* Etwas heller als der Hintergrund */
     border: 1px solid #333;     /* Rahmen */
@@ -39,6 +73,13 @@ body {
 .highlight {
   color: #e6a25e;
   font-style: italic;
+}
+
+.widget-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 40px;
 }
 
 .widget {
