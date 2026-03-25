@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+a {
+    color: #e6a25e;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+a:hover {
+    color: #F9ECDE !important;
+}
 
 body {
     background-color: #090909;
@@ -44,7 +53,7 @@ button {
     align-items: center;
 }
 
-form {
+.form-weather {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -60,6 +69,16 @@ form {
     min-height: 90vh;           /* 90% der Bildschirmhöhe */
 }
 
+.registerbox {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 32px;
+    padding: 40px;
+    margin: 100px;
+    align-items: center;
+}
 
 .top {
     text-align: center;
@@ -67,6 +86,7 @@ form {
     margin: 100px;
     font-weight: 400;
     padding-top: 60px;
+    padding-bottom: 30px;
 }
 
 
@@ -102,4 +122,33 @@ form {
 
 .widgettext {
     margin-bottom: 10px
+}
+
+.form-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-register input {
+    width: 300px;
+    height: 40px;
+}
+
+.form-register button {
+    width: 300px;
+    height: 40px;
+}
+
+.top-register {
+    text-align: center;
+    font-size: 70px;
+    margin: 50px;
+    font-weight: 400;
+}
+
+.logininstead {
+    padding-top: 40px;
+    font-size: 20px;
 }

@@ -1,8 +1,11 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from widgets.weather import get_weather, get_coordinates
 from widgets.finance import get_etf
+from database import init_db, get_database
+
+init_db()
 
 
 # Creates App with FastAPI
@@ -13,6 +16,26 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Templatesfolder
 templates = Jinja2Templates(directory="templates")
+
+@app.get("/register")
+def register_page(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})
+
+@app.post("/register")
+def register(request: Request, username: str = Form(...), password: str = Form(...)):
+    hashed = pwd_context.hash(password)
+    db = get_database()
+    try:
+        # write new user into database
+        db.execute("INSERT INTO users (username, password) VALUES (?, ?)", username, hashed)
+        # commit the changes
+        db.commit()
+    except: # if username already exists
+        return templates.TemplateResponse("register.html", {"request": request, "error": "Username already exists"})
+    finally:
+        db.close
+    # after successful register -> login page
+    return RedirectResponse("/login", status_code=303)
 
 @app.get("/") # Homepage
 def home(request: Request, city: str = "Bern"):

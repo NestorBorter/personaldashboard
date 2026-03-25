@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Virtuelle Umgebung
+# Venvs
 venv/
 .env/
 venvp
@@ -18,7 +18,10 @@ venvl/
 # Secrets
 .env
 
-# IDE-Dateien
+# IDE-Files
 .vscode/
 .idea/
 .idea
+
+# Database
+dashboard.db
