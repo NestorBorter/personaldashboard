@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="registerbox">
+        <span class="top-register">Login</span>
+        <form class="form-register" action="/login" method="post">
+            <input type="text" name="username" placeholder="Username"> <br>
+            <input type="password" name="password" placeholder="Password"> <br>
+            <button type="submit">Login</button>
+        </form>
+        <a href="/register" class="logininstead">
+            Register instead?
+        </a>
+    </div>
+</body>
+</html>

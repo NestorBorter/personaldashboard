@@ -2,6 +2,7 @@ import sqlite3
 
 def get_database():
     db = sqlite3.connect("dashboard.db")
+    db.row_factory = sqlite3.Row
     print("Opened database!")
     return db
 
